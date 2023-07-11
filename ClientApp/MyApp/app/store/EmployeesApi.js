@@ -6,6 +6,7 @@ Ext.define('MyApp.store.EmployeesApi', {
     model: 'MyApp.model.Employee',
 
     autoLoad: true,
+    pageSize: null,
 
     proxy: {
         type: 'ajax',
@@ -15,7 +16,11 @@ Ext.define('MyApp.store.EmployeesApi', {
             type: 'json',
             headers: { 'Accept': 'application/json' },
         }
-        // type: 'ajax',
-        // url:'https://localhost:7069/api/EmployeesController'
+    },
+
+    listeners: {
+        load: function( store, records) {
+          console.log(records);
+        }
     }
 });
