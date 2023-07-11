@@ -9,16 +9,20 @@ Ext.define('MyApp.view.main.List', {
         'MyApp.store.EmployeesApi'
     ],
 
-    title: 'EmployeesApi',
+    title: 'Employees',
 
     store: {
         type: 'EmployeesApi'
     },
 
     columns: [
-        { text: 'Id',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
-        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+        { text: 'Id',  dataIndex: 'id' },
+        { text: 'Name', dataIndex: 'name', flex: 1 },
+        { text: 'Title', dataIndex: 'title', flex: 1 },
+        { text: 'Age', dataIndex: 'age'},
+        { text: 'Company', dataIndex: 'company', flex: 1 },
+        { text: 'Workstation No.', dataIndex: 'workstationNo', flex: 1 },
+        { text: 'Site', dataIndex: 'site', flex: 1 }
     ],
 
     listeners: {
