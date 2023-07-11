@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "ki7QjCywbkOAR91jocKn6QUBPtJD8JwHJjtf0BgYJiQ=",
+  "Hash": "nRAQPs1EXETo0TZvIkuMCDVx6nnXySFNG0iGX2PDpp4=",
   "Source": "EmployeesWebApplication",
   "BasePath": "_content/EmployeesWebApplication",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EmployeesWebApplication\\wwwroot",
+      "Source": "EmployeesWebApplication",
+      "ContentRoot": "C:\\Users\\romfa\\source\\repos\\EmployeesWebApplication\\EmployeesWebApplication\\wwwroot\\",
+      "BasePath": "_content/EmployeesWebApplication",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
