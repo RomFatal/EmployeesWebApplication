@@ -6,17 +6,17 @@ Ext.define('MyApp.view.main.List', {
     xtype: 'mainlist',
 
     requires: [
-        'MyApp.store.Personnel'
+        'MyApp.store.EmployeesApi'
     ],
 
-    title: 'Personnel',
+    title: 'EmployeesApi',
 
     store: {
-        type: 'personnel'
+        type: 'EmployeesApi'
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
+        { text: 'Id',  dataIndex: 'name' },
         { text: 'Email', dataIndex: 'email', flex: 1 },
         { text: 'Phone', dataIndex: 'phone', flex: 1 }
     ],
