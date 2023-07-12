@@ -2,7 +2,9 @@
  * This view is an example list of people.
  */
 Ext.define('MyApp.view.main.List', {
+
     extend: 'Ext.grid.Panel',
+    
     xtype: 'mainlist',
 
     requires: [
@@ -14,6 +16,7 @@ Ext.define('MyApp.view.main.List', {
     store: {
         type: 'EmployeesApi'
     },
+    
     actions: {
 
         edit: {
@@ -44,15 +47,16 @@ Ext.define('MyApp.view.main.List', {
     ],
 
     tbar: [
-        { xtype: 'button', text: 'Add Employee', cls: 'x-btn-default-small', handler: 'AddEmployee' }
+        { xtype: 'button', text: 'Add Employee', cls: 'x-btn-default-small', handler: 'AddRecord'}
     ],
-    form: {
 
+    form: {
         fields: {
             text: 'Id',
             text: 'Last Name',
         },
     },
+
     listeners: {
         select: 'onItemSelected'
     }
