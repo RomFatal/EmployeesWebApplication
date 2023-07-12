@@ -56,10 +56,7 @@ namespace EmployeesWebApplication.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(long id, Employee employee)
         {
-            if (id != employee.ID)
-            {
-                return BadRequest();
-            }
+            employee.ID = id;
 
             _context.Entry(employee).State = EntityState.Modified;
 
