@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EmployeeApi.Models;
 using EmployeesWebApplication.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace EmployeesWebApplication.Controllers
 {
@@ -55,7 +56,7 @@ namespace EmployeesWebApplication.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEmployee(long id, Employee employee)
         {
-            if (id != employee.Id)
+            if (id != employee.ID)
             {
                 return BadRequest();
             }
@@ -93,7 +94,7 @@ namespace EmployeesWebApplication.Controllers
             _context.Employees.Add(employee);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
+            return CreatedAtAction(nameof(GetEmployee), new { id = employee.ID }, employee);
         }
 
         // DELETE: api/Employees/5
@@ -118,7 +119,7 @@ namespace EmployeesWebApplication.Controllers
 
         private bool EmployeeExists(long id)
         {
-            return (_context.Employees?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Employees?.Any(e => e.ID == id)).GetValueOrDefault();
         }
     }
 }
