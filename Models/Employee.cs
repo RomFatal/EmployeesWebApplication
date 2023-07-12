@@ -2,7 +2,7 @@
 {
     public class Employee
     {
-        public long Id { get; set; }
+        public long ID { get; set; }
         public string? Name { get; set; }
         public string? Job { get; set; }
         public string? Title { get; set; }
